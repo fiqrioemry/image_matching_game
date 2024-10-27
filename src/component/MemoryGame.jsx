@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Lion from "../assets/lion.png";
-import Cat from "../assets/cat.png";
-import Crocodile from "../assets/crocodile.png";
-import Elephant from "../assets/elephant.png";
-import Monkey from "../assets/monkey.png";
-import Eagle from "../assets/eagle.png";
-import Turtle from "../assets/turtle.png";
-import Dog from "../assets/dog.png";
+import Lion from "../assets/lion.webp";
+import Cat from "../assets/cat.webp";
+import Crocodile from "../assets/crocodile.webp";
+import Elephant from "../assets/elephant.webp";
+import Monkey from "../assets/monkey.webp";
+import Eagle from "../assets/eagle.webp";
+import Turtle from "../assets/turtle.webp";
+import Dog from "../assets/dog.webp";
 
 // Daftar gambar untuk kartu
 const images = [Lion, Cat, Monkey, Elephant, Crocodile, Eagle, Turtle, Dog];
