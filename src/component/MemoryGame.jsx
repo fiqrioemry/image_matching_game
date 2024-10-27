@@ -1,14 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaCarrot,
-  FaCarSide,
-  FaIdCard,
-  FaBabyCarriage,
-  FaAmazon,
-  FaApple,
-  FaBan,
-  FaBackward,
-} from "react-icons/fa";
 import Lion from "../assets/lion.png";
 import Cat from "../assets/cat.png";
 import Crocodile from "../assets/crocodile.png";
@@ -83,7 +73,7 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 container">
+    <div className="flex flex-col items-center justify-center h-screen container bg-gray-100 overflow-hidden">
       <h1 className="text-2xl font-bold mb-5">Memory Matching Game</h1>
       <div className="grid grid-cols-4 gap-4 mb-4">
         {cards.map((card, index) => (
