@@ -25,7 +25,7 @@ const MemoryGame = () => {
       const newScore = Math.min((perfectClick / clickCount) * 100, 100);
       setScore(newScore);
     }
-  }, [clickCount]);
+  }, [clickCount, cards.length]);
 
   // Mengacak dan mengatur kartu
   useEffect(() => {
