@@ -73,45 +73,47 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen container bg-gray-100 overflow-hidden">
-      <h1 className="text-2xl font-bold mb-5">Memory Matching Game</h1>
-      <div className="grid grid-cols-4 gap-4 mb-4">
-        {cards.map((card, index) => (
-          <div
-            key={card.id}
-            onClick={() => handleCardClick(index)}
-            className={`md:w-24 md:h-24 h-20 w-20 flex items-center justify-center border rounded-lg cursor-pointer ${
-              card.flipped || matchedCards.includes(card.image)
-                ? "bg-white"
-                : "bg-blue-500"
-            }`}
-          >
-            {card.flipped || matchedCards.includes(card.image) ? (
-              <img
-                src={card.image}
-                alt="card"
-                className="w-full h-full rounded-lg"
-              />
-            ) : (
-              <div className="text-white text-3xl">?</div>
-            )}
-          </div>
-        ))}
-      </div>
-      {gameEnded && (
-        <div className="mt-5 text-lg font-bold">
-          Congratulations! You matched all cards!
+    <div className="bg-gray-100 overflow-hidden h-screen">
+      <div className="flex flex-col justiy-center items-center  container mx-auto py-12 ">
+        <h1 className="text-2xl font-bold mb-5">Memory Matching Game</h1>
+        <div className="grid grid-cols-4 gap-4 mb-4 max-w-md">
+          {cards.map((card, index) => (
+            <div
+              key={card.id}
+              onClick={() => handleCardClick(index)}
+              className={`md:w-24 md:h-24 h-20 w-20 flex items-center justify-center border rounded-lg cursor-pointer ${
+                card.flipped || matchedCards.includes(card.image)
+                  ? "bg-white"
+                  : "bg-blue-500"
+              }`}
+            >
+              {card.flipped || matchedCards.includes(card.image) ? (
+                <img
+                  src={card.image}
+                  alt="card"
+                  className="w-full h-full rounded-lg"
+                />
+              ) : (
+                <div className="text-white text-3xl">?</div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
-      <div className="max-w-md  w-full px-5 md:px-2 ">
-        <div className="py-4 px-4 border rounded-md bg-blue-500 w-full text-white">
-          <div className="flex items-center">
-            <div className="w-1/2">click count</div>
-            <div className="w-1/2">: {clickCount}</div>
+        {gameEnded && (
+          <div className="mt-5 text-lg font-bold">
+            Congratulations! You matched all cards!
           </div>
-          <div className="flex items-center">
-            <div className="w-1/2">Total Score</div>
-            <div className="w-1/2">: {score.toFixed(2)}</div>
+        )}
+        <div className="max-w-md  w-full px-5 md:px-2 ">
+          <div className="py-4 px-4 border rounded-md bg-blue-500 w-full text-white">
+            <div className="flex items-center">
+              <div className="w-1/2">click count</div>
+              <div className="w-1/2">: {clickCount}</div>
+            </div>
+            <div className="flex items-center">
+              <div className="w-1/2">Total Score</div>
+              <div className="w-1/2">: {score.toFixed(2)}</div>
+            </div>
           </div>
         </div>
       </div>
